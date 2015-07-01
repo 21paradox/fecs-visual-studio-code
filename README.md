@@ -14,7 +14,7 @@
 
 ### 按住 ctrl + shift + p 调出控制台， 输入 task, 选择 Configure Task Runner
 
-![](https://raw.githubusercontent.com/21paradox/fecs-visual-studio-code/master/img/ctrl+shift+p.png)
+![](https://raw.githubusercontent.com/21paradox/fecs-visual-studio-code/master/img/ctrl%2Bshift%2Bp.png)
 
 ### 把相应的 json 配置文件替换成如下信息
 
