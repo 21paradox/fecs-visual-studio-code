@@ -4,25 +4,21 @@
 
 > npm install fecs -g
 
-
-
+![](https://raw.githubusercontent.com/21paradox/fecs-visual-studio-code/master/img/install-fecs.png)
 
 没有npm? 点击http://nodejs.org/download/ 下载
-
 
 ### 打开 visual studio code
 
 没有 visual studio code? 点击 https://code.visualstudio.com/ 下载
 
+### 按住 ctrl + shift + p 调出控制台， 输入 task, 选择 Configure Task Runner
 
-### 按住 ctrl + shift + p 调出控制台， 输入 task
-
-### 选择 Configure Task Runner
-
+![](https://raw.githubusercontent.com/21paradox/fecs-visual-studio-code/master/img/ctrl+shift+p.png)
 
 ### 把相应的 json 配置文件替换成如下信息
 
-
+![](https://raw.githubusercontent.com/21paradox/fecs-visual-studio-code/master/img/replace-selectedWords.png)
 
 ```js
 
@@ -84,7 +80,8 @@
 ```
 
 
-
 ### 再次 按住 ctrl + shift + p 调出控制台， 输入 task, 选择你的task, 开始
+
+![](https://raw.githubusercontent.com/21paradox/fecs-visual-studio-code/master/img/after-replace.png)
 
 
