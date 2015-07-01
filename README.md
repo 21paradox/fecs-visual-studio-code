@@ -85,3 +85,6 @@
 ![](https://raw.githubusercontent.com/21paradox/fecs-visual-studio-code/master/img/after-replace.png)
 
 
+### 现在有提示了
+![](https://raw.githubusercontent.com/21paradox/fecs-visual-studio-code/master/img/run%20fecs.png)
+
