@@ -30,7 +30,7 @@
 	// task 可以有多个，定义不同的 taskName 和 args就行
 	"tasks": [
 		{
-			"taskName": "check my code01" , 
+			"taskName": "code01" , // 这里不要带空格
 			
 			// 这里填写 path, 使用 node-glob 的match方式， 
 			// **/* 代表当前目录 和子目录 下面所有的文件
