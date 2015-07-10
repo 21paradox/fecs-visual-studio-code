@@ -24,13 +24,13 @@
 
 {
 	"version": "0.1.0",
-	"command": "fecs check", // 这里是全局 fecs命令
+	"command": "fecs", // 这里是全局 fecs命令
 	"isShellCommand": true,
 	
 	// task 可以有多个，定义不同的 taskName 和 args就行
 	"tasks": [
 		{
-			"taskName": "code01" , // 这里不要带空格
+			"taskName": "check widget" , // 写task 名字
 			
 			// 这里填写 path, 使用 node-glob 的match方式， 
 			// **/* 代表当前目录 和子目录 下面所有的文件
