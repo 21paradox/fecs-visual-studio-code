@@ -8,16 +8,61 @@
 
 // A task runner that calls the Typescipt compiler (tsc) and 
 // Compiles a HelloWorld.ts program
-
 {
 	"version": "0.1.0",
-	"command": "fecs check", // 这里是全局 fecs命令
+	"command": "fecs", // 这里是全局 fecs命令
 	"isShellCommand": true,
 	
 	// task 可以有多个，定义不同的 taskName 和 args就行
 	"tasks": [
 		{
-			"taskName": "code01" , // 这里不要带空格
+			"taskName": "check widget" , // 可以写 check1
+			
+			// 这里填写 path, 使用 node-glob 的match方式， 
+			// **/* 代表当前目录 和子目录 下面所有的文件
+			// node-glob 也可以 match 更复杂的
+			// 比如 不检查script下 test文件夹 和 所有 test/spec 文件, 可以写：
+			// script/!(test)/**/!(*_test.js|*_spec.js)'
+			// 更多 参考  https://github.com/isaacs/node-glob
+			"args": ["**/img/*"], 
+			
+			// Make this the default build command.
+			"isBuildCommand": true,
+			// Show the output window only if unrecognized errors occur.
+			"showOutput": "always",
+			
+			"problemMatcher": {
+				// The problem is owned by the typescript language service. Ensure that the problems
+				// are merged with problems produced by Visual Studio's language service.
+				"owner": "javascript",
+				// The file name for reported problems is relative to the current working directory.
+				"fileLocation": ["relative", "${cwd}"],
+				// The actual pattern to match problems in the output.
+				"pattern": [
+					{
+			           "regexp": "^fecs\\s+?INFO\\s(.+?)\\s.+messages\\)$", //regex 检测文件名
+			           "file": 1
+			        },
+					{
+						// The regular expression. Matches HelloWorld.ts(2,10): error TS2339: Property 'logg' does not exist on type 'Console'.
+						"regexp": "^fecs\\s+?(.*)\\s→\\sline\\s(\\d+),\\scol\\s(\\d+):\\s(.*)", //regex 检测error
+						// The match group that denotes the file containing the problem.
+						"severity": 1,
+						// The match group that denotes the problem location.
+						"line": 2,
+						// The match group that denotes the problem's severity. Can be omitted.
+						"column": 3,
+						// The match group that denotes the problem code. Can be omitted.
+						"message": 4,
+						// The match group that denotes the problem's message.
+						"loop": true
+					}
+				]
+			}
+		},
+		
+		{
+			"taskName": "check all" , // 可以写 check1
 			
 			// 这里填写 path, 使用 node-glob 的match方式， 
 			// **/* 代表当前目录 和子目录 下面所有的文件
